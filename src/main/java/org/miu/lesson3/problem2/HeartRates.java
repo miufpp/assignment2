@@ -16,10 +16,10 @@ public class HeartRates {
     private static final int MHR_CONST=220;
 
 
-    public HeartRates(String fname, String lname, String dob) {
+    public HeartRates(String fname, String lname, LocalDate dob) {
         this.fName = fname;
         this.lName = lname;
-        this.dob = LocalDate.parse(dob, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        this.dob = dob;
         this.age=calcAge();
         this.maxHeartRate=calcMaxHeartRate();
     }
